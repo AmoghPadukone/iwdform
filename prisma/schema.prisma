@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Define the generator
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Define the PostgreSQL database as the datasource
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Define the Domain model to represent different domains a company can hire for
+model Domain {
+  id       String    @id @default(cuid())
+  name     String    @unique
+  companies CompanyDetails[] 
+}
+
+model CompanyDetails {
+  id              String    @id @default(cuid())
+  phoneNumber     String
+  companyName     String
+  companyLinkedin String
+  emailAddress    String    @unique
+  position        String
+  companyWebsite  String
+  domains         Domain[]  
+}
