@@ -1,12 +1,15 @@
-import React from 'react'
-import {JobFairForm} from '@/components/forms/JobFairForm'
 import DateTime from '@/components/custom/DateTime'
 import Location from '@/components/custom/Location'
+import { JobFairForm } from '@/components/forms/JobFairForm'
+import React from 'react'
 export default function page() {
   return (
-    <section className='flex p-4 h-screen'>
+    <section className=' h-screen'>
+      <div id="blob">
+</div>
+      <div className='border-2  border-black	border-solid	 flex m-16 p-4 glass'>
 
-        <div className='w-full p-4 flex flex-col gap-2 items-center'>
+      <div className='w-full p-4 flex flex-col gap-2 items-center'>
             <img src="https://cdn.lu.ma/cdn-cgi/image/format=auto,fit=cover,dpr=1,quality=75,width=300,height=300/event-defaults/1-1/retro1.png" className='w-[80%] h-[40%] rounded-lg' alt="" />
             <h1 className='font-bold text-5xl'>IWD Job Fair</h1>
 
@@ -23,6 +26,7 @@ export default function page() {
         <div className='w-full p-4'>
             <JobFairForm />
         </div>
+      </div>
     </section>
   )
 }

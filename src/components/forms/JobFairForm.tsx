@@ -1,9 +1,5 @@
 "use client";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { Button } from "@/components/ui/button";
-import MultipleSelector,{Option} from "../ui/MultipleSelector";
 import {
   Form,
   FormControl,
@@ -14,6 +10,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import MultipleSelector, { Option } from "../ui/MultipleSelector";
 
 
   
@@ -33,7 +33,8 @@ export function JobFairForm() {
   };
 
   return (
-    <Form {...form}>
+   
+      <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}  className="space-y-8 p-4">
         <FormItem>
           <FormLabel>Phone</FormLabel>
@@ -140,5 +141,6 @@ export function JobFairForm() {
         <Button type="submit"  className="w-full">Submit</Button>
       </form>
     </Form>
+    
   );
 }
