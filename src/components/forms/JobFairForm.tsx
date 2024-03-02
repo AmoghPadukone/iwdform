@@ -34,8 +34,8 @@ export function JobFairForm() {
 
   return (
    
-      <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}  className="space-y-8 p-4">
+      <Form {...form}  >
+      <form onSubmit={form.handleSubmit(onSubmit)}  className=" w-full h-full my-auto space-y-5 p-4">
         <FormItem>
           <FormLabel>Phone</FormLabel>
           <FormControl>
@@ -126,7 +126,7 @@ export function JobFairForm() {
           </FormMessage>
         </FormItem>
 
-        <FormItem>
+        <FormItem className="text-white">
           <FormLabel>Domains</FormLabel>
           <FormControl>
             <MultipleSelector
