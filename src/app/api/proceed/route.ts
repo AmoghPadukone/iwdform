@@ -1,5 +1,5 @@
 import { PrismaClient } from '@prisma/client';
-import { NextResponse, NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest, res: NextResponse) {
     const prisma = new PrismaClient();
@@ -12,7 +12,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const domains = await prisma.domain.findMany({
             where: {
                 name: {
-                    in: data.domains.map((domain:any) => domain.value)
+                    in: data.domains.map((domain: any) => domain.value)
                 }
             }
         });
@@ -36,7 +36,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
             STATUS: "ok"
         });
     } catch (error) {
-       console.log(error);
+        console.log(error);
+        // Return an error response
+        return NextResponse.error();
     } finally {
         await prisma.$disconnect();
     }
