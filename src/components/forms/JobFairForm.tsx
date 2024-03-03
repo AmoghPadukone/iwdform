@@ -10,6 +10,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import axios from 'axios';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -20,16 +21,20 @@ import MultipleSelector, { Option } from "../ui/MultipleSelector";
 
 
 const OPTIONS: Option[] = [
-    { label: 'AIML', value: 'AIML' },
-    { label: 'Fullstack', value: 'Fullstack' },
+    { label: 'AIML', value: 'aiml' },
+    { label: 'Fullstack', value: 'fullstack' },
     // Add other options as needed
   ];
 
 export function JobFairForm() {
   const form = useForm();
 
-  const onSubmit = (data:any) => {
-    console.log(data);
+  const onSubmit = async (data:any) => {
+    axios.post('/api/proceed',{
+      data:data
+    }).then((response)=>{
+      console.log(response);
+    }) 
   };
 
   return (
