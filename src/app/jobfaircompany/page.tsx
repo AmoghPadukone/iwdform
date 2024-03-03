@@ -4,7 +4,7 @@ import { JobFairForm } from '@/components/forms/JobFairForm'
 import React from 'react'
 export default function page() {
   return (
-    <section className=' max-h-screen md:max-w-[80vw] m-auto  text-white md:overflow-hidden'>
+    <section className=' max-h-screen md:max-w-[80vw] m-auto  text-white'>
       <div id="blob">
 </div>
 <div id="blobt">
