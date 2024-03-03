@@ -33,11 +33,11 @@ export async function POST(req: NextRequest, res: NextResponse) {
         });
 
         return NextResponse.json({
-            STATUS: "ok"
+            'result':registration
         });
     } catch (error) {
         console.log(error);
-        // Return an error response
+        // Log the error and return a generic error response
         return NextResponse.error();
     } finally {
         await prisma.$disconnect();
