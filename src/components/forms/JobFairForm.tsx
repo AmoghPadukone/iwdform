@@ -1,4 +1,10 @@
 "use client";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -9,9 +15,12 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { ShowQR } from "../custom/ShowQR";
+
+
 import { Input } from "@/components/ui/input";
-import axios from 'axios';
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from 'axios';
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import MultipleSelector, { Option } from "../ui/MultipleSelector";
@@ -140,6 +149,20 @@ export function JobFairForm() {
               defaultOptions={OPTIONS}
               placeholder="Please select your suited domain"
             />
+          </FormControl>
+        
+        </FormItem>
+
+
+      <ShowQR/>
+
+
+        <FormItem className="text-white">
+          <FormLabel>Payment ss</FormLabel>
+          <FormControl>
+          
+      <Input  id="paymentConformation"  {...form.register("paymentSS")} type="file" />
+    
           </FormControl>
         
         </FormItem>
