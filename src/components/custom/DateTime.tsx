@@ -4,12 +4,12 @@ export default function DateTime({smallMonth,date,month,year,time}:any) {
   return (
     <div className='flex gap-3 items-center p-3'>
 
-        <div className='rounded-lg flex flex-col  border-black border-[0.2px] px-1'>
-            <div>
+        <div className='rounded-lg flex flex-col  '>
+            <div className='bg-[#fc4f4f] rounded-b-none	 rounded w-full px-[8px]'>
                 {smallMonth}
             </div>
 
-            <div className='font-bold flex items-center  w-full  '>
+            <div className='font-bold  border-white border-t-0	border-[0.2px] rounded-lg rounded-t-none  w-full text-center  '>
                 {date}
             </div>
         </div>
