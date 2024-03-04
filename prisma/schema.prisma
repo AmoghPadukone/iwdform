@@ -14,9 +14,9 @@ datasource db {
 
 // Define the Domain model to represent different domains a company can hire for
 model domain {
-  id       String    @id @default(cuid())
-  name     String    @unique
-  companies companyDetails[]?
+  id        String         @id @default(cuid())
+  name      String         @unique
+  companies companyDetails[]
 }
 
 model companyDetails {
