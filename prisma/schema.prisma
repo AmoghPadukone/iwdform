@@ -16,7 +16,7 @@ datasource db {
 model domain {
   id       String    @id @default(cuid())
   name     String    @unique
-  companies CompanyDetails[] 
+  companies companyDetails[] 
 }
 
 model companyDetails {
@@ -27,5 +27,5 @@ model companyDetails {
   emailAddress    String    @unique
   position        String
   companyWebsite  String
-  domains         Domain[]  
+  domains         dsomain[]  
 }
