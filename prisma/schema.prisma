@@ -27,5 +27,5 @@ model companyDetails {
   emailAddress    String    @unique
   position        String
   companyWebsite  String
-  domains         dsomain[]  
+  domains         domain[]  
 }
