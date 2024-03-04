@@ -26,9 +26,6 @@ import { z } from "zod";
 import MultipleSelector, { Option } from "../ui/MultipleSelector";
 
 
-  
-
-
 const OPTIONS: Option[] = [
     { label: 'AIML', value: 'aiml' },
     { label: 'Fullstack', value: 'fullstack' },
