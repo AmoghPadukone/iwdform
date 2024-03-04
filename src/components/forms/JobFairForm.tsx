@@ -160,7 +160,7 @@ export function JobFairForm() {
       <ShowQR/>
 
 
-        <FormItem className="text-white">
+        {/* <FormItem className="text-white">
           <FormLabel>Payment ss</FormLabel>
           <FormControl>
           
@@ -168,7 +168,7 @@ export function JobFairForm() {
     
           </FormControl>
         
-        </FormItem>
+        </FormItem> */}
         <Button type="submit"  className="w-full">Submit</Button>
       </form>
     </Form>

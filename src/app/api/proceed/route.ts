@@ -8,6 +8,8 @@ export async function POST(req: NextRequest, res: NextResponse) {
         const body = await req.json();
         const data = body.data;
 
+       
+
         // Fetch Domain records based on domain names
         const domains = await prisma.domain.findMany({
             where: {
@@ -33,11 +35,10 @@ export async function POST(req: NextRequest, res: NextResponse) {
         });
 
         return NextResponse.json({
-            'result':registration
+            result: registration
         });
     } catch (error) {
-        console.log(error);
-        // Log the error and return a generic error response
+        console.error(error);
         return NextResponse.error();
     } finally {
         await prisma.$disconnect();
