@@ -13,13 +13,13 @@ datasource db {
 }
 
 // Define the Domain model to represent different domains a company can hire for
-model Domain {
+model domain {
   id       String    @id @default(cuid())
   name     String    @unique
   companies CompanyDetails[] 
 }
 
-model CompanyDetails {
+model companyDetails {
   id              String    @id @default(cuid())
   phoneNumber     String
   companyName     String
